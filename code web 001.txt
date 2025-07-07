@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>i-d-e-c</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Prompt', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo img {
+      height: 40px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    .hero {
+      background: linear-gradient(135deg, #007bff, #81c8ee);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .about {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    footer {
+      background-color: #eee;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="i-d-e-c logo">
+    </div>
+    <nav>
+      <a href="#about">เกี่ยวกับเรา</a>
+      <a href="#contact">ติดต่อ</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>สร้างสรรค์งานออกแบบ และก่อสร้างอย่างมืออาชีพ</h1>
+    <p>i-d-e-c ผู้นำด้าน design & construction ที่คุณไว้วางใจ</p>
+  </section>
+
+  <section class="about" id="about">
+    <h2>เกี่ยวกับเรา</h2>
+    <p>
+      เราคือทีมงานมืออาชีพด้านการออกแบบและก่อสร้าง ที่เน้นคุณภาพ ความละเอียด และบริการที่จริงใจ 
+      เราพร้อมดูแลทุกขั้นตอน ตั้งแต่แนวคิด จนถึงการส่งมอบผลงานอย่างสมบูรณ์
+    </p>
+  </section>
+
+  <footer id="contact">
+    <p>บริษัท i-d-e-c design and construction</p>
+    <p>ติดต่อ: (พี่ชัชใส่เบอร์ / LINE / ที่อยู่อีกทีภายหลัง)</p>
+    <p>&copy; 2025 i-d-e-c. All rights reserved.</p>
+  </footer>
+</body>
+</html>
