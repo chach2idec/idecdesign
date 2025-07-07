@@ -30,17 +30,62 @@
       font-weight: 500;
     }
     .hero {
-      background: linear-gradient(135deg, #007bff, #81c8ee);
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-    .hero h1 {
+    .hero-slider {
+      display: flex;
+      width: 400%;
+      animation: slide 20s infinite;
+    }
+    .hero-slide {
+      flex: 1 0 100%;
+      height: 80vh;
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero-overlay h1 {
       font-size: 3rem;
       margin-bottom: 10px;
     }
-    .hero p {
+    .hero-overlay p {
       font-size: 1.2rem;
+      max-width: 700px;
+    }
+    .hero-overlay a {
+      background-color:#4B0082;
+      color:white;
+      padding:10px 20px;
+      border-radius:5px;
+      text-decoration:none;
+      display:inline-block;
+      margin-top:20px;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      24% { transform: translateX(0%); }
+      26% { transform: translateX(-100%); }
+      49% { transform: translateX(-100%); }
+      51% { transform: translateX(-200%); }
+      74% { transform: translateX(-200%); }
+      76% { transform: translateX(-300%); }
+      99% { transform: translateX(-300%); }
+      100% { transform: translateX(0%); }
     }
     .about {
       padding: 60px 20px;
@@ -71,9 +116,17 @@
   </header>
 
   <section class="hero" id="home">
-    <h1>ยินดีต้อนรับสู่ I-D-E-C</h1>
-    <p>เราคือบริษัทรับเหมาตกแต่งภายในที่มีประสบการณ์ยาวนาน เชี่ยวชาญในการสร้างสรรค์งานคุณภาพ ด้วยความใส่ใจในทุกรายละเอียด เพื่อมอบผลงานที่ดีที่สุดให้กับลูกค้า</p>
-    <a href="#contact" style="background-color:#4B0082; color:white; padding:10px 20px; border-radius:5px; text-decoration:none; display:inline-block; margin-top:20px;">ติดต่อเรา</a>
+    <div class="hero-slider">
+      <div class="hero-slide" style="background-image: url('bg1.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('bg2.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('bg3.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('bg4.jpg');"></div>
+    </div>
+    <div class="hero-overlay">
+      <h1>ยินดีต้อนรับสู่ I-D-E-C</h1>
+      <p>เราคือบริษัทรับเหมาตกแต่งภายในที่มีประสบการณ์ยาวนาน เชี่ยวชาญในการสร้างสรรค์งานคุณภาพ ด้วยความใส่ใจในทุกรายละเอียด เพื่อมอบผลงานที่ดีที่สุดให้กับลูกค้า</p>
+      <a href="#contact">ติดต่อเรา</a>
+    </div>
   </section>
 
   <section class="about" id="about">
