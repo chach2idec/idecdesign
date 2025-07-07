@@ -3,79 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>บริษัท I-D-E-C</title>
+  <title>i-d-e-c</title>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Prompt', sans-serif;
-      background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+      background-color: #f9f9f9;
       color: #333;
     }
     header {
-      background: #fff;
-      padding: 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+    .logo img {
+      height: 40px;
+    }
     nav a {
       margin: 0 15px;
-      color: #333;
       text-decoration: none;
-      font-weight: 600;
+      color: #333;
+      font-weight: 500;
     }
     .hero {
+      background: linear-gradient(135deg, #007bff, #81c8ee);
+      color: white;
+      padding: 100px 20px;
       text-align: center;
-      padding: 80px 20px;
     }
     .hero h1 {
-      font-size: 36px;
+      font-size: 3rem;
       margin-bottom: 10px;
     }
     .hero p {
-      font-size: 18px;
-      margin-bottom: 30px;
+      font-size: 1.2rem;
     }
-    .btn {
-      background-color: #4a148c;
-      color: #fff;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      text-decoration: none;
+    .about {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
     }
     footer {
+      background-color: #eee;
+      padding: 30px 20px;
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #777;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <div style="font-weight: 600; font-size: 20px;">I-D-E-C Co., Ltd.</div>
+    <div class="logo">
+      <img src="logo.png" alt="i-d-e-c logo">
+    </div>
     <nav>
-      <a href="#">หน้าแรก</a>
-      <a href="#">เกี่ยวกับเรา</a>
-      <a href="#">บริการ</a>
-      <a href="#">ติดต่อ</a>
+      <a href="#home">หน้าแรก</a>
+      <a href="#about">เกี่ยวกับเรา</a>
+      <a href="#services">บริการ</a>
+      <a href="#contact">ติดต่อ</a>
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" id="home">
     <h1>สวัสดีจากบริษัท I-D-E-C</h1>
     <p>เราคือผู้เชี่ยวชาญด้านการออกแบบและเทคโนโลยีเพื่อธุรกิจของคุณ</p>
-    <a href="#" class="btn">ติดต่อเรา</a>
+    <a href="#contact" style="background-color:#4B0082; color:white; padding:10px 20px; border-radius:5px; text-decoration:none; display:inline-block; margin-top:20px;">ติดต่อเรา</a>
   </section>
 
-  <footer>
-    &copy; 2025 I-D-E-C Co., Ltd. สงวนลิขสิทธิ์
-  </footer>
+  <section class="about" id="about">
+    <h2>เกี่ยวกับเรา</h2>
+    <p>
+      เราคือทีมงานมืออาชีพด้านการออกแบบและก่อสร้าง ที่เน้นคุณภาพ ความละเอียด และบริการที่จริงใจ 
+      เราพร้อมดูแลทุกขั้นตอน ตั้งแต่แนวคิด จนถึงการส่งมอบผลงานอย่างสมบูรณ์
+    </p>
+  </section>
 
+  <footer id="contact">
+    <p>บริษัท i-d-e-c design and construction</p>
+    <p>ติดต่อ: (พี่ชัชใส่เบอร์ / LINE / ที่อยู่อีกทีภายหลัง)</p>
+    <p>&copy; 2025 i-d-e-c. All rights reserved.</p>
+  </footer>
 </body>
 </html>
+
