@@ -2,133 +2,149 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>i-d-e-c | Interior Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>I-D-E-C</title>
   <style>
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      color: #333;
-    }
-    header {
-      background-color: #f9f9f9;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    header .logo img {
-      height: 40px;
-    }
-    header nav a {
-      color: #333;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 1em;
-    }
-    header nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
+    * {box-sizing: border-box}
+    body {margin: 0; font-family: 'Sarabun', sans-serif;}
+    .slideshow-container {
       position: relative;
-      height: 100vh;
-      background: url('bg1.jpg') center center / cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .hero h1 {
-      color: white;
-      font-size: 2.5em;
-      background-color: rgba(0,0,0,0.6);
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      max-width: 100%;
       margin: auto;
     }
-    .section h2 {
-      text-align: center;
-      margin-bottom: 30px;
+    .mySlides {
+      display: none;
+      position: relative;
     }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .gallery img {
+    .mySlides img {
       width: 100%;
-      max-width: 300px;
       height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .pdf-button {
       display: block;
-      width: fit-content;
-      margin: 40px auto 0 auto;
-      background-color: #000;
-      color: #fff;
-      padding: 12px 30px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1em;
     }
-    .pdf-button:hover {
-      background-color: #444;
-    }
-    footer {
+    .text {
+      color: white;
+      font-size: 22px;
+      padding: 20px;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      line-height: 1.6;
       text-align: center;
-      padding: 30px;
-      background-color: #f5f5f5;
-      font-size: 0.9em;
+    }
+    .dot-container {
+      text-align: center;
+      position: relative;
+      top: -30px;
+    }
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active {
+      background-color: #717171;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="index.html"><img src="logo.png" alt="i-d-e-c logo"></a>
+
+<div class="slideshow-container">
+
+  <!-- Slide 1 -->
+  <div class="mySlides fade">
+    <img src="slide1.jpg" alt="Slide 1">
+    <div class="text">
+      “บ้านคือสมบัติที่มีคุณค่า การตกแต่งจึงต้องส่งต่อด้วยความไว้วางใจ<br>
+      เราสร้างทุกมุมบ้านด้วยประสบการณ์และความซื่อตรง<br>
+      ที่คุณ และบริษัทบ้านชั้นนำ เชื่อมั่นเรามาโดยตลอด”
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#services">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  </div>
 
-  <section class="hero">
-    <h1>ยกระดับพื้นที่ของคุณ ด้วยงานตกแต่งภายในคุณภาพสูง</h1>
-  </section>
-
-  <section class="section" id="services">
-    <h2>บริการของเรา</h2>
-    <p style="text-align: center;">รับออกแบบตกแต่งภายในสำหรับบ้าน คอนโด ร้านค้า และสำนักงาน พร้อมดูแลครบวงจร</p>
-  </section>
-
-  <section class="section" id="portfolio">
-    <h2>ผลงานที่ผ่านมา</h2>
-    <div class="gallery">
-      <img src="bg2.jpg" alt="ผลงาน 1">
-      <img src="bg3.jpg" alt="ผลงาน 2">
-      <img src="bg4.jpg" alt="ผลงาน 3">
+  <!-- Slide 2 -->
+  <div class="mySlides fade">
+    <img src="slide2.jpg" alt="Slide 2">
+    <div class="text">
+      งานตกแต่งภายในที่ดี...เริ่มจากวัสดุและอุปกรณ์ที่ใช่ คิดถึงการใช้งานในทุกวัน<br>
+      รายละเอียดเล็ก ๆ เหล่านี้ คือสิ่งที่ทำให้บ้านเป็นบ้านที่ใช่สำหรับคุณ<br><br>
+      i-d-e-c เลือกใช้อุปกรณ์ที่เลือกสรรแล้วว่ามีคุณภาพ ทำให้งานของคุณออกมามีคุณภาพตามต้องการ
     </div>
-    <a class="pdf-button" href="https://drive.google.com/file/d/1oj3alwx95MQGYYdzqqexSdIzpdI4bzYQ/view?usp=drive_link" target="_blank">ดูผลงานเพิ่มเติม (PDF)</a>
-  </section>
+  </div>
 
-  <footer>
-    &copy; 2025 i-d-e-c. All rights reserved.
-  </footer>
+  <!-- Slide 3 -->
+  <div class="mySlides fade">
+    <img src="slide3.jpg" alt="Slide 3">
+    <div class="text">
+      เราใช้ช่างฝีมือที่มีความเชี่ยวชาญเฉพาะด้าน<br>
+      สร้างงานที่ปราณีตสำหรับคุณ ไม่ว่าจะเป็น<br>
+      งานไม้ งานสี งานหิน งานโลหะ หรืองานผ้าบุ
+    </div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="mySlides fade">
+    <img src="slide4.jpg" alt="Slide 4">
+    <div class="text">
+      บ้านที่เริ่มต้นด้วยรอยยิ้มของคุณ คือแรงบันดาลใจของเรา<br>
+      เราจึงทำงานด้วยความตั้งใจ ใส่ใจทุกรายละเอียด<br>
+      พร้อมความรวดเร็วและตรงต่อเวลา<br>
+      เพื่อให้คุณได้มีความสุขกับบ้าน...ในแบบที่คุณต้องการ
+    </div>
+  </div>
+
+</div>
+
+<!-- จุดแสดงสถานะสไลด์ -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<!-- JavaScript -->
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  const slides = document.getElementsByClassName("mySlides");
+  const dots = document.getElementsByClassName("dot");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+
+  setTimeout(showSlides, 6000); // เปลี่ยนภาพทุก 6 วินาที
+}
+
+function currentSlide(n) {
+  slideIndex = n - 1;
+  showSlides();
+}
+</script>
+
 </body>
 </html>
+
+
+
+
