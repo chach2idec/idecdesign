@@ -2,148 +2,130 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>I-D-E-C</title>
+  <title>I-D-E-C Design</title>
   <style>
-    * {box-sizing: border-box}
-    body {margin: 0; font-family: 'Sarabun', sans-serif;}
-    .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
     }
-    .mySlides {
-      display: none;
-      position: relative;
-    }
-    .mySlides img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .text {
-      color: white;
-      font-size: 22px;
-      padding: 20px;
+
+    header {
       position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      line-height: 1.6;
-      text-align: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 50px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
     }
-    .dot-container {
-      text-align: center;
+
+    .logo {
+      height: 50px;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    .slideshow {
       position: relative;
-      top: -30px;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
     }
-    .dot {
-      height: 15px;
-      width: 15px;
-      margin: 0 4px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
+
+    .slides {
+      display: flex;
+      width: 400%;
+      height: 100%;
+      animation: slide 16s infinite;
     }
-    .active {
-      background-color: #717171;
+
+    .slide {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 80%;
+      text-align: center;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      25% { transform: translateX(-100%); }
+      50% { transform: translateX(-200%); }
+      75% { transform: translateX(-300%); }
+      100% { transform: translateX(0%); }
     }
   </style>
 </head>
 <body>
 
-<div class="slideshow-container">
+  <header>
+    <img src="logo.png" alt="I-D-E-C Logo" class="logo">
+    <nav>
+      <a href="index.html">หน้าแรก</a>
+      <a href="#works">ผลงาน</a>
+      <a href="#about">เกี่ยวกับเรา</a>
+      <a href="contact.html">ติดต่อเรา</a>
+    </nav>
+  </header>
 
-  <!-- Slide 1 -->
-  <div class="mySlides fade">
-    <img src="slide1.jpg" alt="Slide 1">
-    <div class="text">
-      “บ้านคือสมบัติที่มีคุณค่า การตกแต่งจึงต้องส่งต่อด้วยความไว้วางใจ<br>
-      เราสร้างทุกมุมบ้านด้วยประสบการณ์และความซื่อตรง<br>
-      ที่คุณ และบริษัทบ้านชั้นนำ เชื่อมั่นเรามาโดยตลอด”
+  <div class="slideshow">
+    <div class="slides">
+      <div class="slide">
+        <img src="slide1.jpg" alt="Slide 1">
+        <div class="caption">“บ้านคือสมบัติที่มีคุณค่า การตกแต่งจึงต้องส่งต่อด้วยความไว้วางใจ เราสร้างทุกมุมบ้านด้วยประสบการณ์และความซื่อตรง ที่คุณ และบริษัทบ้านชั้นนำ เชื่อมั่นเรามาโดยตลอด”</div>
+      </div>
+      <div class="slide">
+        <img src="slide2.jpg" alt="Slide 2">
+        <div class="caption">งานตกแต่งภายในที่ดี...เริ่มจากวัสดุและอุปกรณ์ที่ใช่ คิดถึงการใช้งานในทุกวัน<br>รายละเอียดเล็ก ๆ เหล่านี้ คือสิ่งที่ทำให้บ้านเป็นบ้านที่ใช่สำหรับคุณ<br><em>i-d-e-c เลือกใช้อุปกรณ์ที่เลือกสรรแล้วว่ามีคุณภาพ ทำให้งานของคุณออกมามีคุณภาพตามต้องการ</em></div>
+      </div>
+      <div class="slide">
+        <img src="slide3.jpg" alt="Slide 3">
+        <div class="caption">เราใช้ช่างฝีมือที่มีความเชี่ยวชาญเฉพาะด้าน<br>สร้างงานที่ปราณีตสำหรับคุณ<br>ไม่ว่าจะเป็น งานไม้ งานสี งานหิน งานโลหะ หรืองานผ้าบุ</div>
+      </div>
+      <div class="slide">
+        <img src="slide4.jpg" alt="Slide 4">
+        <div class="caption">บ้านที่เริ่มต้นด้วยรอยยิ้มของคุณ คือแรงบันดาลใจของเรา<br>เราจึงทำงานด้วยความตั้งใจ ใส่ใจทุกรายละเอียด<br>พร้อมความรวดเร็วและตรงต่อเวลา<br>เพื่อให้คุณได้มีความสุขกับบ้าน...ในแบบที่คุณต้องการ</div>
+      </div>
     </div>
   </div>
-
-  <!-- Slide 2 -->
-  <div class="mySlides fade">
-    <img src="slide2.jpg" alt="Slide 2">
-    <div class="text">
-      งานตกแต่งภายในที่ดี...เริ่มจากวัสดุและอุปกรณ์ที่ใช่ คิดถึงการใช้งานในทุกวัน<br>
-      รายละเอียดเล็ก ๆ เหล่านี้ คือสิ่งที่ทำให้บ้านเป็นบ้านที่ใช่สำหรับคุณ<br><br>
-      i-d-e-c เลือกใช้อุปกรณ์ที่เลือกสรรแล้วว่ามีคุณภาพ ทำให้งานของคุณออกมามีคุณภาพตามต้องการ
-    </div>
-  </div>
-
-  <!-- Slide 3 -->
-  <div class="mySlides fade">
-    <img src="slide3.jpg" alt="Slide 3">
-    <div class="text">
-      เราใช้ช่างฝีมือที่มีความเชี่ยวชาญเฉพาะด้าน<br>
-      สร้างงานที่ปราณีตสำหรับคุณ ไม่ว่าจะเป็น<br>
-      งานไม้ งานสี งานหิน งานโลหะ หรืองานผ้าบุ
-    </div>
-  </div>
-
-  <!-- Slide 4 -->
-  <div class="mySlides fade">
-    <img src="slide4.jpg" alt="Slide 4">
-    <div class="text">
-      บ้านที่เริ่มต้นด้วยรอยยิ้มของคุณ คือแรงบันดาลใจของเรา<br>
-      เราจึงทำงานด้วยความตั้งใจ ใส่ใจทุกรายละเอียด<br>
-      พร้อมความรวดเร็วและตรงต่อเวลา<br>
-      เพื่อให้คุณได้มีความสุขกับบ้าน...ในแบบที่คุณต้องการ
-    </div>
-  </div>
-
-</div>
-
-<!-- จุดแสดงสถานะสไลด์ -->
-<div class="dot-container">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span> 
-</div>
-
-<!-- JavaScript -->
-<script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  const slides = document.getElementsByClassName("mySlides");
-  const dots = document.getElementsByClassName("dot");
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-
-  setTimeout(showSlides, 6000); // เปลี่ยนภาพทุก 6 วินาที
-}
-
-function currentSlide(n) {
-  slideIndex = n - 1;
-  showSlides();
-}
-</script>
 
 </body>
 </html>
+
 
 
 
