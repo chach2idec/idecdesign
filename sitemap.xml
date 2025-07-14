@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://i-d-e-c.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://i-d-e-c.com/#about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://i-d-e-c.com/ผลงาน</loc>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://i-d-e-c.com/#services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://i-d-e-c.com/เกี่ยวกับเรา</loc>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://i-d-e-c.com/#contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://i-d-e-c.com/ติดต่อเรา</loc>
+    <priority>0.80</priority>
   </url>
 </urlset>
-
-
