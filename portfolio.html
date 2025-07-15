@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ผลงานของเรา | I-D-E-C รับเหมาตกแต่งภายใน ครบวงจร</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ผลงาน - I-D-E-C</title>
 
-  <!-- SEO -->
-  <meta name="description" content="รวมผลงานการตกแต่งภายในจากทีม I-D-E-C งานคุณภาพ ด้วยความใส่ใจในทุกรายละเอียด">
-  <meta name="keywords" content="ตกแต่งภายใน, ผลงาน I-D-E-C, built-in, interior portfolio">
+  <meta name="description" content="รวมผลงานการตกแต่งภายในคุณภาพโดย I-D-E-C ที่ไว้วางใจได้จากลูกค้าและโครงการชั้นนำ">
   <meta name="author" content="I-D-E-C">
-
-  <!-- OG Tags -->
-  <meta property="og:title" content="ผลงานการตกแต่งภายใน | I-D-E-C">
-  <meta property="og:description" content="ชมผลงานคุณภาพของ I-D-E-C บริการตกแต่งภายในครบวงจร">
-  <meta property="og:image" content="https://i-d-e-c.com/images/work01.jpg">
-  <meta property="og:url" content="https://i-d-e-c.com/portfolio.html">
-  <meta name="twitter:card" content="summary_large_image">
 
   <style>
     * {
@@ -26,26 +17,25 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
       overflow-x: hidden;
-      background-color: #f9f9f9;
     }
 
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: black;
-      padding: 20px 40px;
+      background-color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 10;
+      padding: 10px 40px;
+      z-index: 20;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: white;
+    .logo img {
+      height: 50px;
     }
 
     .menu {
@@ -54,35 +44,35 @@
     }
 
     .menu a {
-      color: white;
+      color: #333;
       text-decoration: none;
       font-weight: 500;
     }
 
-    section.portfolio {
-      padding: 120px 20px 60px;
+    .header {
+      margin-top: 100px;
+      text-align: center;
+      padding-bottom: 20px;
     }
 
-    .portfolio h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 40px;
-      color: #333;
+    .header h1 {
+      font-size: 36px;
+      color: #222;
     }
 
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
+      gap: 20px;
       max-width: 1200px;
-      margin: auto;
+      margin: 30px auto 60px;
+      padding: 0 20px;
     }
 
     .gallery img {
       width: 100%;
-      height: auto;
-      border-radius: 6px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
 
@@ -90,20 +80,30 @@
       transform: scale(1.03);
     }
 
-    .gallery p {
-      text-align: center;
-      margin-top: 8px;
-      font-size: 14px;
-      color: #555;
+    @media(max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu {
+        flex-wrap: wrap;
+        padding-top: 10px;
+      }
+
+      .header h1 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
-
 <body>
 
   <!-- Navbar -->
   <div class="navbar">
-    <div class="logo">I-D-E-C</div>
+    <div class="logo">
+      <img src="images/logo.png" alt="I-D-E-C Logo">
+    </div>
     <div class="menu">
       <a href="index.html">หน้าแรก</a>
       <a href="portfolio.html">ผลงาน</a>
@@ -112,26 +112,27 @@
     </div>
   </div>
 
-  <!-- Section: Portfolio -->
-  <section class="portfolio">
-    <h2>ผลงานของเรา</h2>
-    <div class="gallery">
-      <div><img src="images/work01.jpg" alt="ผลงาน 1"><p>ผลงาน 1</p></div>
-      <div><img src="images/work02.jpg" alt="ผลงาน 2"><p>ผลงาน 2</p></div>
-      <div><img src="images/work03.jpg" alt="ผลงาน 3"><p>ผลงาน 3</p></div>
-      <div><img src="images/work04.jpg" alt="ผลงาน 4"><p>ผลงาน 4</p></div>
-      <div><img src="images/work05.jpg" alt="ผลงาน 5"><p>ผลงาน 5</p></div>
-      <div><img src="images/work06.jpg" alt="ผลงาน 6"><p>ผลงาน 6</p></div>
-      <div><img src="images/work07.jpg" alt="ผลงาน 7"><p>ผลงาน 7</p></div>
-      <div><img src="images/work08.jpg" alt="ผลงาน 8"><p>ผลงาน 8</p></div>
-      <div><img src="images/work09.jpg" alt="ผลงาน 9"><p>ผลงาน 9</p></div>
-      <div><img src="images/work10.jpg" alt="ผลงาน 10"><p>ผลงาน 10</p></div>
-      <div><img src="images/work11.jpg" alt="ผลงาน 11"><p>ผลงาน 11</p></div>
-      <div><img src="images/work12.jpg" alt="ผลงาน 12"><p>ผลงาน 12</p></div>
-      <div><img src="images/work13.jpg" alt="ผลงาน 13"><p>ผลงาน 13</p></div>
-    </div>
-  </section>
+  <!-- Header -->
+  <div class="header">
+    <h1>ผลงานของเรา</h1>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <img src="images/work01.jpg" alt="ผลงาน 1" />
+    <img src="images/work02.jpg" alt="ผลงาน 2" />
+    <img src="images/work03.jpg" alt="ผลงาน 3" />
+    <img src="images/work04.jpg" alt="ผลงาน 4" />
+    <img src="images/work05.jpg" alt="ผลงาน 5" />
+    <img src="images/work06.jpg" alt="ผลงาน 6" />
+    <img src="images/work07.jpg" alt="ผลงาน 7" />
+    <img src="images/work08.jpg" alt="ผลงาน 8" />
+    <img src="images/work09.jpg" alt="ผลงาน 9" />
+    <img src="images/work10.jpg" alt="ผลงาน 10" />
+    <img src="images/work11.jpg" alt="ผลงาน 11" />
+    <img src="images/work12.jpg" alt="ผลงาน 12" />
+    <img src="images/work13.jpg" alt="ผลงาน 13" />
+  </div>
 
 </body>
 </html>
-
