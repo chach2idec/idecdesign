@@ -2,73 +2,47 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ติดต่อเรา | i-d-e-c</title>
   <style>
-    * {
-      box-sizing: border-box;
+    body {
+      font-family: 'Sarabun', sans-serif;
       margin: 0;
       padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
       background-color: #fff;
       color: #333;
     }
-
-    /* แถบเมนู */
-    .navbar {
-      width: 100%;
-      background-color: white;
+    header {
+      background-color: #fff;
+      padding: 10px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 30px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 999;
+      border-bottom: 1px solid #ddd;
     }
-
-    .navbar .logo img {
-      height: 45px;
+    .logo img {
+      height: 50px;
     }
-
-    .navbar .menu {
-      display: flex;
-      gap: 25px;
-    }
-
-    .navbar .menu a {
-      color: #000;
+    nav a {
       text-decoration: none;
-      font-weight: 500;
+      color: #333;
+      margin-left: 25px;
       font-size: 16px;
     }
-
-    .navbar .menu a:hover {
-      color: #555;
-    }
-
-    /* เนื้อหา */
     .contact-section {
-      padding: 110px 20px 60px;
-      max-width: 700px;
+      max-width: 800px;
       margin: auto;
+      padding: 60px 20px;
     }
-
     .contact-section h2 {
       text-align: center;
       margin-bottom: 30px;
+      font-size: 28px;
     }
-
     .contact-section p {
       font-size: 1.1em;
       line-height: 1.6;
     }
-
     iframe {
       width: 100%;
       height: 350px;
@@ -76,47 +50,28 @@
       border-radius: 10px;
       margin-top: 30px;
     }
-
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .navbar .menu {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        margin-top: 10px;
-      }
-    }
   </style>
 </head>
 <body>
-
-  <!-- เมนู + โลโก้ -->
-  <div class="navbar">
+  <header>
     <div class="logo">
-      <a href="index.html"><img src="logo.png" alt="i-d-e-c logo"></a>
+      <a href="index.html"><img src="logo.png" alt="i-d-e-c logo" /></a>
     </div>
-    <div class="menu">
+    <nav>
       <a href="index.html">หน้าแรก</a>
       <a href="portfolio.html">ผลงาน</a>
       <a href="about.html">เกี่ยวกับเรา</a>
       <a href="contact.html">ติดต่อเรา</a>
-    </div>
-  </div>
+    </nav>
+  </header>
 
-  <!-- เนื้อหา -->
   <section class="contact-section">
     <h2>ติดต่อเรา</h2>
     <p><strong>i-d-e-c design and construction co.,ltd.</strong></p>
     <p><strong>โทร:</strong> 066-398-9169, 081-922-9165</p>
     <p><strong>อีเมล:</strong> design.idec@gmail.com</p>
     <p><strong>ที่อยู่:</strong> 55/263 ถนนกาญจนาภิเษก แขวงปลายบาง เขตบางกรวย นนทบุรี 11130</p>
-
     <iframe src="https://www.google.com/maps?q=13.803229,100.435550&hl=th&z=15&output=embed"></iframe>
   </section>
-
 </body>
 </html>
