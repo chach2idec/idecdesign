@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>I-D-E-C รับเหมาตกแต่งภายใน ครบวงจร</title>
 
-  <!-- SEO: คำอธิบายสั้น ๆ เกี่ยวกับเว็บไซต์ -->
+  <!-- SEO -->
   <meta name="description" content="I-D-E-C บริการรับเหมาตกแต่งภายในครบวงจร ด้วยวัสดุคุณภาพ ทีมช่างผู้เชี่ยวชาญ และความใส่ใจในทุกรายละเอียด เพื่อสร้างบ้านในฝันให้คุณ">
-  
-  <!-- SEO: คำค้นหา -->
   <meta name="keywords" content="ตกแต่งภายใน, interior design, i-d-e-c, idec, รับเหมาตกแต่ง, ตกแตงภายในบ้าน, งานbuilt-in งานไม้ งานหิน งานผ้าบุ">
-
-  <!-- SEO: ผู้เขียน -->
   <meta name="author" content="I-D-E-C">
 
-  <!-- Social Media (Optional) -->
+  <!-- Social Media -->
   <meta property="og:title" content="I-D-E-C รับเหมาตกแต่งภายใน ครบวงจร">
   <meta property="og:description" content="ตกแต่งภายในด้วยคุณภาพและความใส่ใจในทุกรายละเอียด">
   <meta property="og:image" content="https://i-d-e-c.com/slide1.jpg">
@@ -34,20 +30,21 @@
     }
 
     .navbar {
-      position: absolute;
+      position: fixed;
       top: 0;
       width: 100%;
+      background-color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
-      z-index: 10;
+      padding: 10px 40px;
+      z-index: 20;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: white;
+    .logo img {
+      height: 50px;
+      object-fit: contain;
     }
 
     .menu {
@@ -56,12 +53,13 @@
     }
 
     .menu a {
-      color: white;
+      color: #333;
       text-decoration: none;
       font-weight: 500;
     }
 
     .slider {
+      margin-top: 80px;
       position: relative;
       width: 100%;
       height: 100vh;
@@ -140,7 +138,9 @@
 <body>
 
   <div class="navbar">
-    <div class="logo">I-D-E-C</div>
+    <div class="logo">
+      <img src="images/logo.png" alt="I-D-E-C Logo">
+    </div>
     <div class="menu">
       <a href="index.html">หน้าแรก</a>
       <a href="portfolio.html">ผลงาน</a>
@@ -203,34 +203,8 @@
       updateSlide();
     }
 
-    setInterval(nextSlide, 8000); // เปลี่ยนภาพทุก 8 วินาที
+    setInterval(nextSlide, 8000);
   </script>
-
-  </div>
-</section>
-
-<style>
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-
-  .gallery img:hover {
-    transform: scale(1.03);
-  }
-</style>
-<!-- ส่วนของ "ผลงาน" จบที่นี่ -->
 
 </body>
 </html>
