@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>เกี่ยวกับเรา - I-D-E-C</title>
-
-  <meta name="description" content="รู้จักกับ I-D-E-C บริษัทรับเหมาตกแต่งภายในครบวงจรที่มุ่งเน้นคุณภาพและความใส่ใจในทุกผลงาน">
-  <meta name="author" content="I-D-E-C">
+  <title>เกี่ยวกับเรา | I-D-E-C</title>
+  <meta name="description" content="I-D-E-C ผู้เชี่ยวชาญด้านงานตกแต่งภายใน ที่ใส่ใจในทุกรายละเอียด" />
+  <meta name="keywords" content="ตกแต่งภายใน, interior design, รับเหมา, i-d-e-c" />
+  <meta name="author" content="I-D-E-C" />
 
   <style>
     * {
@@ -17,25 +17,24 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
       overflow-x: hidden;
+      background-color: #1e1e1e;
+      color: #fff;
     }
 
     .navbar {
-      position: fixed;
+      position: absolute;
       top: 0;
       width: 100%;
-      background-color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 40px;
-      z-index: 20;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px 40px;
+      z-index: 10;
     }
 
     .logo img {
-      height: 50px;
+      height: 40px;
     }
 
     .menu {
@@ -44,29 +43,45 @@
     }
 
     .menu a {
-      color: #333;
+      color: white;
       text-decoration: none;
       font-weight: 500;
     }
 
-    .header {
-      margin-top: 100px;
-      text-align: center;
-      padding-bottom: 20px;
-    }
-
-    .header h1 {
-      font-size: 36px;
-      color: #222;
+    .about-section {
+      padding: 120px 20px 60px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
     }
 
     .about-content {
-      max-width: 800px;
-      margin: 30px auto 60px;
-      padding: 0 20px;
+      max-width: 700px;
+      padding-right: 60px;
+      text-align: right;
+    }
+
+    .about-content h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .about-content p {
       font-size: 18px;
       line-height: 1.8;
-      color: #444;
+      opacity: 0.9;
+    }
+
+    .quote {
+      margin-top: 40px;
+      font-style: italic;
+      font-size: 20px;
+      color: #fdd835;
+      border-right: 4px solid #fdd835;
+      padding-right: 15px;
+      display: inline-block;
     }
 
     @media(max-width: 768px) {
@@ -75,27 +90,28 @@
         align-items: flex-start;
       }
 
-      .menu {
-        flex-wrap: wrap;
-        padding-top: 10px;
+      .about-content {
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: center;
       }
 
-      .header h1 {
+      .about-content h1 {
         font-size: 28px;
       }
 
-      .about-content {
-        font-size: 16px;
+      .quote {
+        border: none;
+        padding: 0;
       }
     }
   </style>
 </head>
-<body>
 
-  <!-- Navbar -->
+<body>
   <div class="navbar">
     <div class="logo">
-      <img src="images/logo.png" alt="I-D-E-C Logo">
+      <a href="index.html"><img src="logo.png" alt="logo" /></a>
     </div>
     <div class="menu">
       <a href="index.html">หน้าแรก</a>
@@ -105,25 +121,24 @@
     </div>
   </div>
 
-  <!-- Header -->
-  <div class="header">
-    <h1>เกี่ยวกับเรา</h1>
-  </div>
+  <section class="about-section">
+    <div class="about-content">
+      <h1>เกี่ยวกับเรา</h1>
+      <p>
+        I-D-E-C คือบริษัทรับเหมาตกแต่งภายในที่เชื่อว่า<br>
+        “บ้าน” ไม่ใช่แค่สิ่งปลูกสร้าง แต่เป็นพื้นที่แห่งความสุข<br><br>
 
-  <!-- Content -->
-  <div class="about-content">
-    <p>
-      I-D-E-C คือบริษัทรับเหมาตกแต่งภายในครบวงจรที่มุ่งเน้นคุณภาพ ความใส่ใจ และความซื่อตรงในการทำงาน
-      เราภูมิใจในผลงานที่สร้างขึ้นด้วยทีมช่างผู้เชี่ยวชาญ และวัสดุคุณภาพที่ผ่านการคัดเลือกมาอย่างดี
-    </p>
-    <p>
-      เราให้บริการครอบคลุมทั้งหมดเกี่ยวกับการตกแต่งภายใน ไม่ว่าจะเป็นงานไม้ งานสี งานหิน งานโลหะ และงานผ้าบุ พร้อมดูแลทุกขั้นตอนของโครงการด้วยความตั้งใจ
-      เป้าหมายของเราคือการส่งมอบ “บ้านที่ใช่” สำหรับคุณ
-    </p>
-    <p>
-      ด้วยประสบการณ์ในวงการตกแต่งภายใน และความไว้วางใจจากลูกค้าหลายราย I-D-E-C มุ่งมั่นที่จะเป็นชื่อแรกที่คุณนึกถึงเมื่อคิดถึงงานตกแต่งที่มีคุณภาพ
-    </p>
-  </div>
+        เราทำงานอย่างใส่ใจในรายละเอียดทุกขั้นตอน<br>
+        ตั้งแต่แนวคิด การออกแบบ ไปจนถึงการก่อสร้าง<br><br>
 
+        เราคัดเลือกวัสดุที่ดีที่สุด พร้อมทีมช่างผู้เชี่ยวชาญ<br>
+        เพื่อมอบผลงานที่ตรงใจคุณทั้งด้านความงามและการใช้งาน
+      </p>
+
+      <blockquote class="quote">
+        “งานที่ดี เริ่มต้นจากความตั้งใจที่ดี”
+      </blockquote>
+    </div>
+  </section>
 </body>
 </html>
