@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>I-D-E-C รับเหมาตกแต่งภายใน ครบวงจร</title>
+  <meta name="description" content="I-D-E-C บริการรับเหมาตกแต่งภายในครบวงจร ด้วยวัสดุคุณภาพ ทีมช่างผู้เชี่ยวชาญ และความใส่ใจในทุกรายละเอียด เพื่อสร้างบ้านในฝันให้คุณ" />
+  <meta name="keywords" content="ตกแต่งภายใน, interior design, i-d-e-c, idec, รับเหมาตกแต่ง, ตกแต่งภายในบ้าน, งาน built-in" />
+  <meta name="author" content="I-D-E-C" />
 
-  <!-- SEO -->
-  <meta name="description" content="I-D-E-C บริการรับเหมาตกแต่งภายในครบวงจร ด้วยวัสดุคุณภาพ ทีมช่างผู้เชี่ยวชาญ และความใส่ใจในทุกรายละเอียด เพื่อสร้างบ้านในฝันให้คุณ">
-  <meta name="keywords" content="ตกแต่งภายใน, interior design, i-d-e-c, idec, รับเหมาตกแต่ง, ตกแตงภายในบ้าน, งานbuilt-in, งานไม้ งานสี งานหิน งานโลหะ งานผ้าบุ">
-  <meta name="author" content="I-D-E-C">
-
-  <!-- Social Media -->
-  <meta property="og:title" content="I-D-E-C รับเหมาตกแต่งภายใน ครบวงจร">
-  <meta property="og:description" content="ตกแต่งภายในด้วยคุณภาพและความใส่ใจในทุกรายละเอียด">
-  <meta property="og:image" content="https://i-d-e-c.com/slide1.jpg">
-  <meta property="og:url" content="https://i-d-e-c.com">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="I-D-E-C รับเหมาตกแต่งภายใน ครบวงจร" />
+  <meta property="og:description" content="ตกแต่งภายในด้วยคุณภาพและความใส่ใจในทุกรายละเอียด" />
+  <meta property="og:image" content="https://i-d-e-c.com/slide1.jpg" />
+  <meta property="og:url" content="https://i-d-e-c.com" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <style>
     * {
@@ -30,21 +27,18 @@
     }
 
     .navbar {
-      position: fixed;
+      position: absolute;
       top: 0;
       width: 100%;
-      background-color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 40px;
-      z-index: 20;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px 40px;
+      z-index: 10;
     }
 
     .logo img {
-      height: 50px;
-      object-fit: contain;
+      height: 40px;
     }
 
     .menu {
@@ -53,13 +47,12 @@
     }
 
     .menu a {
-      color: #333;
+      color: white;
       text-decoration: none;
       font-weight: 500;
     }
 
     .slider {
-      margin-top: 80px;
       position: relative;
       width: 100%;
       height: 100vh;
@@ -88,15 +81,24 @@
 
     .caption {
       position: absolute;
-      bottom: 60px;
+      top: 60px;
       left: 50px;
       max-width: 700px;
       background-color: rgba(0, 0, 0, 0.6);
       color: white;
-      padding: 20px;
+      padding: 25px;
+      border-radius: 8px;
+    }
+
+    .caption h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .caption p {
       font-size: 18px;
       line-height: 1.6;
-      border-radius: 8px;
     }
 
     .arrows {
@@ -123,23 +125,33 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
       .menu {
         flex-wrap: wrap;
       }
+
       .caption {
-        font-size: 16px;
         left: 20px;
         right: 20px;
-        bottom: 30px;
+        top: 40px;
+        padding: 20px;
+      }
+
+      .caption h2 {
+        font-size: 22px;
+      }
+
+      .caption p {
+        font-size: 16px;
       }
     }
   </style>
 </head>
-<body>
 
+<body>
   <div class="navbar">
     <div class="logo">
-      <img src="images/logo.png" alt="I-D-E-C Logo">
+      <a href="index.html"><img src="logo.png" alt="logo" /></a>
     </div>
     <div class="menu">
       <a href="index.html">หน้าแรก</a>
@@ -152,28 +164,31 @@
   <div class="slider">
     <div class="slides" id="slideContainer">
       <div class="slide">
-        <img src="slide1.jpg" alt="Slide 1">
+        <img src="slide1.jpg" alt="Slide 1" />
         <div class="caption">
-          บ้านคือสมบัติที่มีคุณค่า การตกแต่งจึงต้องส่งต่อด้วยความไว้วางใจ เราสร้างทุกมุมบ้านด้วยประสบการณ์และความซื่อตรง ที่คุณ และบริษัทบ้านชั้นนำ เชื่อมั่นเรามาโดยตลอด
+          <h2>Integrity</h2>
+          <p>บ้านคือสมบัติที่มีคุณค่า การตกแต่งจึงต้องส่งต่อด้วยความไว้วางใจ เราสร้างทุกมุมบ้านด้วยประสบการณ์และความซื่อตรง ที่คุณ และบริษัทบ้านชั้นนำ เชื่อมั่นเรามาโดยตลอด</p>
         </div>
       </div>
       <div class="slide">
-        <img src="slide2.jpg" alt="Slide 2">
+        <img src="slide2.jpg" alt="Slide 2" />
         <div class="caption">
-          งานตกแต่งภายในที่ดี...เริ่มจากวัสดุและอุปกรณ์ที่ดี ต้องคำนึงถึงการใช้งานในทุกวัน รายละเอียดเล็กๆเหล่านี้ คือสิ่งที่ทำให้บ้านเป็นบ้านที่ใช่สำหรับคุณ<br>
-          I-D-E-C เลือกใช้อุปกรณ์ที่เลือกสรรแล้วว่ามีคุณภาพ ทำให้งานของคุณออกมามีคุณภาพตามต้องการ
+          <h2>Detailing</h2>
+          <p>งานตกแต่งภายในที่ดี...เริ่มจากวัสดุและอุปกรณ์ที่ใช่ คิดถึงการใช้งานในทุกวัน รายละเอียดเล็ก ๆ เหล่านี้ คือสิ่งที่ทำให้บ้านเป็นบ้านที่ใช่สำหรับคุณ<br>I-D-E-C เลือกใช้อุปกรณ์ที่เลือกสรรแล้วว่ามีคุณภาพ ทำให้งานของคุณออกมามีคุณภาพตามต้องการ</p>
         </div>
       </div>
       <div class="slide">
-        <img src="slide3.jpg" alt="Slide 3">
+        <img src="slide3.jpg" alt="Slide 3" />
         <div class="caption">
-          เราใช้ช่างฝีมือที่มีความเชี่ยวชาญเฉพาะด้าน สร้างงานที่ปราณีตสำหรับคุณ ไม่ว่าจะเป็น งานไม้ งานสี งานหิน งานโลหะ หรืองานผ้าบุ เพิ่อให้ได้ผลงานออกมาสวยงามและคุ้มค่ากับวัสดุชั้นดี...ที่คุณเลือกแล้วว่าใช่
+          <h2>Expertise</h2>
+          <p>เราใช้ช่างฝีมือที่มีความเชี่ยวชาญเฉพาะด้าน สร้างงานที่ปราณีตสำหรับคุณ ไม่ว่าจะเป็น งานไม้ งานสี งานหิน งานโลหะ หรืองานผ้าบุ</p>
         </div>
       </div>
       <div class="slide">
-        <img src="slide4.jpg" alt="Slide 4">
+        <img src="slide4.jpg" alt="Slide 4" />
         <div class="caption">
-          บ้านที่เริ่มต้นด้วยรอยยิ้มของคุณ คือแรงบันดาลใจของเรา เราจึงทำงานด้วยความตั้งใจ ใส่ใจทุกรายละเอียด ดูแลบ้านของคุณ และใส่ใจในรวดเร็วและตรงต่อเวลา เพื่อให้คุณได้มีความสุขกับบ้าน...ตามที่คุณต้องการ
+          <h2>Consistency</h2>
+          <p>บ้านที่เริ่มต้นด้วยรอยยิ้มของคุณ คือแรงบันดาลใจของเรา เราจึงทำงานด้วยความตั้งใจ ใส่ใจทุกรายละเอียด พร้อมความรวดเร็วและตรงต่อเวลา เพื่อให้คุณได้มีความสุขกับบ้าน...ในแบบที่คุณต้องการ</p>
         </div>
       </div>
     </div>
@@ -203,8 +218,7 @@
       updateSlide();
     }
 
-    setInterval(nextSlide, 8000);
+    setInterval(nextSlide, 8000); // เปลี่ยนทุก 8 วินาที
   </script>
-
 </body>
 </html>
