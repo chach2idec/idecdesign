@@ -14,7 +14,7 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
+      background-color: #d6bfa6; /* เปลี่ยนเป็นน้ำตาลกลาง */
       color: #333;
     }
 
@@ -64,6 +64,33 @@
       margin-bottom: 10px;
     }
 
+    .line-section {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .line-logo {
+      width: 36px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    .line-button {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #06c755;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .line-button:hover {
+      background-color: #05a94d;
+    }
+
     @media(max-width: 768px) {
       .navbar {
         flex-direction: column;
@@ -99,9 +126,14 @@
     <h1>เกี่ยวกับเรา</h1>
     <p><strong>ชื่อบริษัท:</strong> I-D-E-C Design and Construction Co., Ltd.</p>
     <p><strong>ที่อยู่:</strong> 55/263 ถนนกาญจนาภิเษก แขวงปลายบาง เขตบางกรวย นนทบุรี 11130</p>
-    <p><strong>โทร:</strong> 066-398-9169, 081-922-9165</p>
+    <p><strong>โทร:</strong><br>066-398-9169<br>081-922-9165</p>
     <p><strong>อีเมล:</strong> design.idec@gmail.com</p>
     <p><strong>Line ID:</strong> idecdesign</p>
+
+    <div class="line-section">
+      <img class="line-logo" src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="Line logo" />
+      <a class="line-button" href="https://line.me/R/ti/p/@idecdesign" target="_blank">แอด Line ของเรา</a>
+    </div>
   </section>
 </body>
 </html>
