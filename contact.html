@@ -3,40 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ติดต่อเรา | I-D-E-C</title>
+  <title>เกี่ยวกับเรา | I-D-E-C</title>
   <meta name="description" content="ข้อมูลติดต่อและที่อยู่ของบริษัท I-D-E-C" />
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #d6bfa6;
-      color: #333;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
-    .container {
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #d6bfa6; /* เปลี่ยนเป็นน้ำตาลกลาง */
+      color: #333;
+    }
+
+    .navbar {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .about-section {
+      padding: 100px 20px 60px;
       max-width: 700px;
       margin: auto;
-      padding: 60px 20px;
-      background: white;
+      background-color: white;
       border-radius: 12px;
       box-shadow: 0 2px 15px rgba(0,0,0,0.05);
     }
 
-    h1 {
+    .about-section h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
       text-align: center;
-      margin-bottom: 40px;
       color: #111;
     }
 
-    p {
+    .about-section p {
       font-size: 18px;
       line-height: 1.8;
       margin-bottom: 10px;
     }
 
     .line-section {
-      margin-top: 30px;
+      margin-top: 20px;
       text-align: center;
     }
 
@@ -61,23 +90,53 @@
     .line-button:hover {
       background-color: #05a94d;
     }
+
+    @media(max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+
+      .menu {
+        flex-wrap: wrap;
+      }
+
+      .about-section {
+        padding: 60px 20px;
+      }
+    }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>ติดต่อเรา</h1>
 
-    <p><strong>ชื่อบริษัท:</strong> i-d-e-c design and construction co.,ltd.</p>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" alt="logo" /></a>
+    </div>
+    <div class="menu">
+      <a href="index.html">หน้าแรก</a>
+      <a href="portfolio.html">ผลงาน</a>
+      <a href="about.html">เกี่ยวกับเรา</a>
+      <a href="contact.html">ติดต่อเรา</a>
+    </div>
+  </div>
+
+  <section class="about-section">
+    <h1>เกี่ยวกับเรา</h1>
+    <p><strong>ชื่อบริษัท:</strong> I-D-E-C Design and Construction Co., Ltd.</p>
+    <p><strong>ที่อยู่:</strong> 55/263 ถนนกาญจนาภิเษก แขวงปลายบาง เขตบางกรวย นนทบุรี 11130</p>
+   
     <p><strong>โทร:</strong><br>066-398-9169</p>
     <p><strong>โทร:</strong><br>081-922-9165</p>
+   
     <p><strong>อีเมล:</strong> design.idec@gmail.com</p>
-    <p><strong>ที่อยู่:</strong> 55/263 ถนนกาญจนาภิเษก แขวงปลายบาง เขตบางกรวย นนทบุรี 11130</p>
+    <p><strong>Line ID:</strong> idecdesign</p>
 
     <div class="line-section">
       <img class="line-logo" src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="Line logo" />
-      <p><strong>Line ID:</strong> idecdesign</p>
-      <a class="line-button" href="https://line.me/ti/p/z5utfQUAVr" target="_blank">แอด Line ของเรา</a>
+      <a class="line-button" href="https://line.me/R/ti/p/@idecdesign" target="_blank">แอด Line ของเรา</a>
     </div>
-  </div>
+  </section>
 </body>
 </html>
