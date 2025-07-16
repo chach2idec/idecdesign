@@ -4,10 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>เกี่ยวกับเรา | I-D-E-C</title>
-  <meta name="description" content="I-D-E-C ผู้เชี่ยวชาญด้านงานตกแต่งภายใน ที่ใส่ใจในทุกรายละเอียด" />
-  <meta name="keywords" content="ตกแต่งภายใน, interior design, รับเหมา, i-d-e-c" />
-  <meta name="author" content="I-D-E-C" />
-
   <style>
     * {
       margin: 0;
@@ -17,20 +13,18 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      overflow-x: hidden;
-      color: #fff;
-      background: url("bg-about.jpg") no-repeat center center fixed;
-      background-size: cover;
+      background-color: #000;
+      color: white;
     }
 
     .navbar {
-      position: absolute;
-      top: 0;
-      width: 100%;
+      background-color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
       z-index: 10;
     }
 
@@ -44,73 +38,65 @@
     }
 
     .menu a {
-      color: white;
+      color: #333;
       text-decoration: none;
       font-weight: 500;
     }
 
     .about-section {
-      padding: 120px 20px 60px;
+      background: url('bg-about.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 100px 20px 80px;
       min-height: 100vh;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      background-color: rgba(0, 0, 0, 0.5); /* เพิ่มพื้นหลังโปร่งดำบาง ๆ */
+      position: relative;
+      z-index: 1;
+      text-align: center;
     }
 
-    .about-content {
-      max-width: 700px;
-      padding-right: 60px;
-      text-align: right;
-      background-color: rgba(0, 0, 0, 0.6); /* กล่องข้อความพื้นหลังโปร่งใส */
-      padding: 40px;
-      border-radius: 10px;
-    }
-
-    .about-content h1 {
+    .about-section h1 {
       font-size: 36px;
-      margin-bottom: 20px;
-      color: #ffffff;
+      margin-bottom: 30px;
+      color: white;
     }
 
-    .about-content p {
+    .about-section p {
       font-size: 18px;
       line-height: 1.8;
-      opacity: 0.95;
+      margin-bottom: 12px;
+      color: white;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .quote {
-      margin-top: 40px;
-      font-style: italic;
-      font-size: 20px;
-      color: #fdd835;
-      border-right: 4px solid #fdd835;
-      padding-right: 15px;
-      display: inline-block;
+      color: #f9c34d;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 30px;
     }
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
         align-items: flex-start;
-      }
-
-      .about-content {
         padding: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
       }
 
-      .quote {
-        border: none;
-        padding: 0;
+      .menu {
+        flex-wrap: wrap;
+      }
+
+      .about-section {
+        padding: 60px 20px;
       }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- ✅ แถบเมนูสีขาว -->
   <div class="navbar">
     <div class="logo">
       <a href="index.html"><img src="logo.png" alt="logo" /></a>
@@ -123,28 +109,15 @@
     </div>
   </div>
 
+  <!-- ✅ เนื้อหาวางบนภาพพื้นหลัง -->
   <section class="about-section">
-    <div class="about-content">
-      <h1>เกี่ยวกับเรา</h1>
-      <p>
-        I-D-E-C คือบริษัทรับเหมาตกแต่งภายในที่เชื่อว่า<br>
-        สิ่งที่เราทำไม่ใช่แค่"งาน. แต่เป็นการสร้าง"ผลงาน"<br><br>
-
-        เราทำงานอย่างตั้งใจและใส่ใจในรายละเอียดทุกขั้นตอน<br>
-        ตั้งแต่การเลือกวัสดุ การคัดสรรช่างฝีมือ ไปจนถึงการดูแลบ้านของคุณ<br><br>
-
-        เราจึงได้รับความไว้วางใจ จากบริษัทชั้นนำเกี่ยวกับบ้าน<br>
-        และจากนักออกแบบตกแต่งภายในทั้วประเทศ
-
-        ให้เป็นผู้ดูแลงานตกแต่งภายในของเค้าเหล่านั้น<br>
-        จนทำให้เกิดผลงานมากมายภายใต้การดูแลของเรา มานับสิบๆปี
-        
-      </p>
-
-      <blockquote class="quote">
-        “งานที่ดี เริ่มต้นจากความตั้งใจที่ดี”
-      </blockquote>
-    </div>
+    <h1>เกี่ยวกับเรา</h1>
+    <p>I-D-E-C คือบริษัทรับเหมางานตกแต่งภายในที่เชื่อว่าสิ่งที่เราทำไม่ใช่แค่งาน แต่เป็นการสร้าง “ผลงาน”</p>
+    <p>เราทำงานอย่างตั้งใจและใส่ใจในรายละเอียดทุกขั้นตอน ตั้งแต่การเลือกวัสดุ การคัดสรรช่างฝีมือ ไปจนถึงการดูแลบ้านของคุณ</p>
+    <p>เราจึงได้รับความไว้วางใจ จากบริษัทชั้นนำที่เกี่ยวกับบ้าน และจากนักออกแบบตกแต่งภายในทั่วประเทศ ให้เป็นผู้รับเหมาสร้างงานให้แก่พวกเค้า</p>
+    <p>จนทำให้เกิดผลงานมากมายภายใต้การดูแลของเรามานับสิบๆปี</p>
+    <p class="quote">“งานที่ดี เริ่มต้นจากความตั้งใจดี”</p>
   </section>
+
 </body>
 </html>
