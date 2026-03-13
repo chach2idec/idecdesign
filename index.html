@@ -1,217 +1,270 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>I-D-E-C รับเหมาตกแต่งภายใน ครบวงจร</title>
-  <meta name="description" content="I-D-E-C บริการรับเหมาตกแต่งภายในครบวงจร ด้วยวัสดุคุณภาพ ทีมช่างผู้เชี่ยวชาญ และความใส่ใจในทุกรายละเอียด เพื่อสร้างบ้านในฝันให้คุณ" />
-  <meta name="keywords" content="ตกแต่งภายใน, interior design, i-d-e-c, idec, รับเหมาตกแต่ง, ตกแต่งภายในบ้าน, งาน built-in" />
-  <meta name="author" content="I-D-E-C" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      overflow-x: hidden;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 40px;
-      z-index: 999;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
+<title>I-D-E-C รับเหมาตกแต่งภายใน ครบวงจร</title>
 
-    .logo img {
-     height: 40px;
-  object-fit: contain;
+<meta name="description" content="I-D-E-C รับเหมางานตกแต่งภายใน และงานเฟอร์นิเจอร์ Built-in สำหรับบ้าน คอนโด และโครงการหมู่บ้าน ด้วยทีมช่างผู้เชี่ยวชาญและวัสดุคุณภาพ">
+
+<meta name="keywords" content="รับเหมาตกแต่งภายใน, interior contractor, built in furniture, งานบิ้วอิน, I-D-E-C">
+
+<meta name="author" content="I-D-E-C">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-    }
+body{
+font-family:'Segoe UI',sans-serif;
+overflow-x:hidden;
+}
 
-    .menu {
-      display: flex;
-      gap: 20px;
-    }
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background-color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 40px;
+z-index:999;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
 
-    .menu a {
-      color: black;
-      text-decoration: none;
-      font-weight: 500;
-    }
+.logo img{
+height:40px;
+object-fit:contain;
+}
 
-    .slider {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      margin-top: 70px; /* กันไม่ให้ชนเมนู */
-    }
+.menu{
+display:flex;
+gap:20px;
+}
 
-    .slides {
-      display: flex;
-      width: 400%;
-      height: 100%;
-      transition: transform 0.8s ease-in-out;
-    }
+.menu a{
+color:black;
+text-decoration:none;
+font-weight:500;
+}
 
-    .slide {
-      width: 100vw;
-      height: 100vh;
-      position: relative;
-      flex-shrink: 0;
-    }
+.slider{
+position:relative;
+width:100%;
+height:100vh;
+overflow:hidden;
+margin-top:70px;
+}
 
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.slides{
+display:flex;
+width:400%;
+height:100%;
+transition:transform 0.8s ease-in-out;
+}
 
-    .caption {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 700px;
-      background-color: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-    }
+.slide{
+width:100vw;
+height:100vh;
+position:relative;
+flex-shrink:0;
+}
 
-    .caption h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
+.slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
 
-    .caption p {
-      font-size: 18px;
-      line-height: 1.7;
-    }
+.caption{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+max-width:700px;
+background-color:rgba(0,0,0,0.6);
+color:white;
+padding:30px;
+border-radius:12px;
+text-align:center;
+}
 
-    .arrows {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-      z-index: 5;
-    }
+.caption h2{
+font-size:36px;
+margin-bottom:15px;
+}
 
-    .arrow {
-      font-size: 40px;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 10px 20px;
-      cursor: pointer;
-      user-select: none;
-    }
+.caption p{
+font-size:18px;
+line-height:1.7;
+}
 
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
-      }
-      .menu {
-        flex-wrap: wrap;
-      }
-      .caption h2 {
-        font-size: 24px;
-      }
-      .caption p {
-        font-size: 16px;
-      }
-    }
-  </style>
+.arrows{
+position:absolute;
+top:50%;
+width:100%;
+display:flex;
+justify-content:space-between;
+transform:translateY(-50%);
+z-index:5;
+}
+
+.arrow{
+font-size:40px;
+color:white;
+background-color:rgba(0,0,0,0.4);
+padding:10px 20px;
+cursor:pointer;
+user-select:none;
+}
+
+@media (max-width:768px){
+
+.navbar{
+flex-direction:column;
+align-items:flex-start;
+padding:10px 20px;
+}
+
+.menu{
+flex-wrap:wrap;
+}
+
+.caption h2{
+font-size:24px;
+}
+
+.caption p{
+font-size:16px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-  <div class="navbar">
-    <div class="logo">
-      <a href="index.html"><img src="logo.png" alt="logo" /></a>
-    </div>
-    <div class="menu">
-      <a href="index.html">หน้าแรก</a>
-      <a href="portfolio.html">ผลงาน</a>
-      <a href="about.html">เกี่ยวกับเรา</a>
-      <a href="contact.html">ติดต่อเรา</a>
-    </div>
-  </div>
 
-  <div class="slider">
-    <div class="slides" id="slideContainer">
-      <div class="slide">
-        <img src="slide1.jpg" alt="Slide 1" />
-        <div class="caption">
-          <h2>Integrity</h2>
-          <p>บ้านคือสมบัติที่มีคุณค่า การตกแต่ง...จึงต้องส่งต่อด้วยความไว้วางใจ เราสร้างทุกมุมบ้านด้วยประสบการณ์และความซื่อตรง ที่คุณและบริษัทบ้านสร้างชั้นนำ เชื่อมั่นในเรามาโดยตลอด</p>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="slide2.jpg" alt="Slide 2" />
-        <div class="caption">
-          <h2>Detailing</h2>
-          <p>งานตกแต่งภายในที่ดี...เริ่มจากวัสดุและอุปกรณ์ที่ดี ต้องคำนึงถึงการใช้งานจริงในทุกๆวัน รายละเอียดเล็กๆเหล่านี้ คือสิ่งที่ทำให้บ้าน เป็นบ้านที่ใช่สำหรับคุณ</p>
-          <p>i-d-e-c เลือกใช้วัสดุอุกรณ์ที่เลือกสรรแล้ว ทำให้งานของคุณออกมามีคุณภาพ ตามที่คุณต้องการ</p>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="slide3.jpg" alt="Slide 3" />
-        <div class="caption">
-          <h2>Expertise</h2>
-          <p>เราใช้ช่างฝีมือที่มีความเชี่ยวชาญเฉพาะด้าน เพื่อให้ได้ผลงานออกมาปราณีตสวยงาม และคุ้มค่ากับวัสดุ ตามที่คุณต้องการ</p>
-          <p>ด้วยฝีมือช่างที่มีประสะการณ์ ไม่ว่าจะเป็น งานไม้ งานสี งานหิน งานโลหะ หรืองานผ้าบุ </p>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="slide4.jpg" alt="Slide 4" />
-        <div class="caption">
-          <h2>Commitment</h2>
-          <p>บ้านที่เริ่มต้นด้วยรอยยิ้มของคุณ คือแรงบันดาลใจของเรา เราจึงทำงานด้วยความตั้งใจ มุ่งมั่น ทุ่มเท ใส่ใจในรายละเอียด พร้อมความรวดเร็วและตรงต่อเวลา</p>
-          <p>ความสุขกับบ้านของคุณ เป็นสัญญาของเรา</p>
-        </div>
-      </div>
-    </div>
+<div class="navbar">
 
-    <div class="arrows">
-      <div class="arrow" onclick="prevSlide()">❮</div>
-      <div class="arrow" onclick="nextSlide()">❯</div>
-    </div>
-  </div>
+<div class="logo">
+<a href="index.html"><img src="logo.png" alt="I-D-E-C"></a>
+</div>
 
-  <script>
-    let currentSlide = 0;
-    const slides = document.getElementById('slideContainer');
-    const totalSlides = slides.children.length;
+<div class="menu">
+<a href="index.html">หน้าแรก</a>
+<a href="portfolio.html">ผลงาน</a>
+<a href="about.html">เกี่ยวกับเรา</a>
+<a href="contact.html">ติดต่อเรา</a>
+</div>
 
-    function updateSlide() {
-      slides.style.transform = `translateX(-${currentSlide * 100}vw)`;
-    }
+</div>
 
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateSlide();
-    }
+<div class="slider">
 
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      updateSlide();
-    }
+<div class="slides" id="slideContainer">
 
-    setInterval(nextSlide, 8000); // เปลี่ยนภาพทุก 8 วินาที
-  </script>
+<div class="slide">
+
+<img src="slide1.jpg" alt="Interior Contractor">
+
+<div class="caption">
+
+<h2>Integrity</h2>
+
+<p><strong>I-D-E-C รับเหมางานตกแต่งภายใน และงานเฟอร์นิเจอร์ Built-in สำหรับบ้าน คอนโด และโครงการหมู่บ้าน</strong></p>
+
+<p>บ้านคือสมบัติที่มีคุณค่า การตกแต่งจึงต้องส่งต่อด้วยความไว้วางใจ เราสร้างทุกมุมบ้านด้วยประสบการณ์และความซื่อตรง ที่ลูกค้าและบริษัทบ้านสร้างชั้นนำเชื่อมั่นในเรา</p>
+
+</div>
+</div>
+
+<div class="slide">
+
+<img src="slide2.jpg" alt="Built in furniture">
+
+<div class="caption">
+
+<h2>Detailing</h2>
+
+<p>งานตกแต่งภายในที่ดีเริ่มจากวัสดุและอุปกรณ์ที่ดี ต้องคำนึงถึงการใช้งานจริงในทุกวัน รายละเอียดเล็กๆเหล่านี้ทำให้บ้านเป็นบ้านที่ใช่สำหรับคุณ</p>
+
+<p>I-D-E-C เลือกใช้วัสดุที่ผ่านการคัดสรร เพื่อให้งานออกมามีคุณภาพตามที่คุณต้องการ</p>
+
+</div>
+</div>
+
+<div class="slide">
+
+<img src="slide3.jpg" alt="Interior craftsmanship">
+
+<div class="caption">
+
+<h2>Expertise</h2>
+
+<p>เราใช้ช่างฝีมือที่มีความเชี่ยวชาญเฉพาะด้าน เพื่อให้ผลงานออกมาปราณีตสวยงาม และคุ้มค่ากับวัสดุ</p>
+
+<p>ไม่ว่าจะเป็นงานไม้ งานสี งานหิน งานโลหะ หรืองานผ้าบุ</p>
+
+</div>
+</div>
+
+<div class="slide">
+
+<img src="slide4.jpg" alt="Interior design commitment">
+
+<div class="caption">
+
+<h2>Commitment</h2>
+
+<p>บ้านที่เริ่มต้นด้วยรอยยิ้มของคุณคือแรงบันดาลใจของเรา เราทำงานด้วยความตั้งใจ มุ่งมั่น และใส่ใจในรายละเอียด</p>
+
+<p>ความสุขกับบ้านของคุณ คือคำสัญญาของเรา</p>
+
+</div>
+</div>
+
+</div>
+
+<div class="arrows">
+<div class="arrow" onclick="prevSlide()">❮</div>
+<div class="arrow" onclick="nextSlide()">❯</div>
+</div>
+
+</div>
+
+<script>
+
+let currentSlide=0
+
+const slides=document.getElementById("slideContainer")
+
+const totalSlides=slides.children.length
+
+function updateSlide(){
+slides.style.transform=`translateX(-${currentSlide*100}vw)`
+}
+
+function nextSlide(){
+currentSlide=(currentSlide+1)%totalSlides
+updateSlide()
+}
+
+function prevSlide(){
+currentSlide=(currentSlide-1+totalSlides)%totalSlides
+updateSlide()
+}
+
+setInterval(nextSlide,8000)
+
+</script>
+
 </body>
 </html>
