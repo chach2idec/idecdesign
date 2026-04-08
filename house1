@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Luxury House</title>
+
+<style>
+body{margin:0;background:#111;font-family:sans-serif;}
+
+.hero img{
+width:100%;
+height:80vh;
+object-fit:cover;
+}
+
+.gallery{
+column-count:2;
+column-gap:10px;
+padding:10px;
+}
+
+.gallery img{
+width:100%;
+margin-bottom:10px;
+border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<img src="house/house1/01-cover.jpg">
+</div>
+
+<div class="gallery">
+<img src="house/house1/02-living.jpg">
+<img src="house/house1/03-pantry.jpg">
+</div>
+
+</body>
+</html>
