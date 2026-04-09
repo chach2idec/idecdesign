@@ -50,9 +50,14 @@ body{
 /* ===== TEXT ===== */
 .text-block{
   text-align:center;
-  padding:70px 20px;
+  padding:100px 20px;
   max-width:800px;
   margin:auto;
+}
+
+.text-block h2{
+  font-size:28px;
+  letter-spacing:1px;
 }
 
 .text-block p{opacity:0.7;}
@@ -97,7 +102,7 @@ body{
   position:fixed;
   top:0;left:0;
   width:100%;height:100%;
-  background:rgba(0,0,0,0.9);
+  background:rgba(0,0,0,0.95);
   justify-content:center;
   align-items:center;
   z-index:2000;
@@ -108,10 +113,6 @@ body{
   max-height:90%;
 }
 
-.lightbox:active{
-  display:none;
-}
-
 /* ===== FOOTER ===== */
 .footer{
   background:#111;
@@ -119,6 +120,7 @@ body{
   grid-template-columns:repeat(4,1fr);
   gap:20px;
   padding:40px;
+  border-top:1px solid #222;
 }
 
 .footer-logo{
@@ -132,13 +134,30 @@ body{
   margin-bottom:5px;
 }
 
-.footer-line a{
+/* LINE BUTTON */
+.line-btn{
+  display:flex;
+  align-items:center;
+  gap:8px;
   background:#00c300;
-  padding:10px 15px;
-  border-radius:8px;
-  display:inline-block;
+  padding:12px 18px;
+  border-radius:10px;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.2s;
 }
 
+.line-btn:hover{
+  background:#00a800;
+}
+
+.line-btn img{
+  width:20px;
+  height:20px;
+}
+
+/* COPYRIGHT */
 .copyright{
   text-align:center;
   padding:15px;
@@ -165,6 +184,10 @@ body{
   .hero img,
   .section img{
     height:auto;
+  }
+
+  .footer{
+    grid-template-columns:1fr;
   }
 }
 </style>
@@ -243,8 +266,11 @@ body{
     <a href="contact.html">ติดต่อ</a>
   </div>
 
-  <div class="footer-line">
-    <a href="https://line.me/ti/p/XXXX" target="_blank">แอด LINE</a>
+  <div>
+    <a href="https://line.me/ti/p/XXXX" target="_blank" class="line-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg">
+      แอด LINE ปรึกษาฟรี
+    </a>
   </div>
 
 </div>
