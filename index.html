@@ -30,7 +30,7 @@ z-index:999;
 .menu{width:100%;justify-content:space-around;}
 }
 
-/* HERO */
+/* HERO TEXT */
 .hero{
 margin-top:90px;
 text-align:center;
@@ -68,7 +68,7 @@ height:100%;
 object-fit:cover;
 }
 
-/* TEXT */
+/* CAPTION (คงเดิม แต่เพิ่มความเนียนนิดเดียว) */
 .caption{
 position:absolute;
 top:50%;left:50%;
@@ -80,6 +80,11 @@ border-radius:12px;
 max-width:600px;
 text-align:center;
 line-height:1.6;
+}
+
+.caption h2{
+font-size:28px;
+margin-bottom:10px;
 }
 
 /* ARROWS */
@@ -100,6 +105,57 @@ padding:10px 20px;
 cursor:pointer;
 }
 
+/* ===== FEATURED ===== */
+.featured{
+padding:80px 20px;
+text-align:center;
+background:#fff;
+}
+
+.featured h2{
+font-size:28px;
+margin-bottom:30px;
+}
+
+.featured-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+max-width:1200px;
+margin:auto;
+}
+
+.featured-grid img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.featured-grid img:hover{
+transform:scale(1.03);
+}
+
+.featured-grid .big{
+grid-column:span 2;
+height:400px;
+}
+
+/* TEXT BREAK */
+.featured-text{
+text-align:center;
+padding:100px 20px;
+max-width:800px;
+margin:auto;
+}
+
+.featured-text p{
+color:#666;
+line-height:1.6;
+}
+
 /* STATS */
 .why{
 padding:60px 20px;
@@ -116,6 +172,52 @@ flex-wrap:wrap;
 
 .stats h3{font-size:36px;}
 
+/* FOOTER */
+.footer{
+background:#111;
+color:white;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+padding:40px;
+}
+
+.footer-logo{width:120px;}
+
+.footer a{
+color:white;
+text-decoration:none;
+display:block;
+margin-bottom:5px;
+}
+
+/* LINE BUTTON */
+.line-btn{
+display:flex;
+align-items:center;
+gap:8px;
+background:#00c300;
+padding:12px 18px;
+border-radius:10px;
+color:white;
+font-weight:600;
+}
+
+.line-btn img{width:20px;}
+
+.copyright{
+text-align:center;
+padding:15px;
+background:#000;
+color:#aaa;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.featured-grid{grid-template-columns:1fr;}
+.featured-grid .big{grid-column:span 1;height:auto;}
+.footer{grid-template-columns:1fr;}
+}
 </style>
 </head>
 
@@ -123,7 +225,7 @@ flex-wrap:wrap;
 
 <!-- NAV -->
 <div class="navbar">
-<div class="logo"><img src="logo.png"></div>
+<div class="logo"><img src="images/logo.png"></div>
 <div class="menu">
 <a href="index.html">หน้าแรก</a>
 <a href="portfolio.html">ผลงาน</a>
@@ -138,7 +240,7 @@ flex-wrap:wrap;
 <p>เราสร้างสรรค์ทุกพื้นที่ภายในบ้าน ให้เป็นมากกว่าความสวยงาม ด้วยประสบการณ์ ความใส่ใจ และมาตรฐานงานระดับมืออาชีพ</p>
 </div>
 
-<!-- SLIDER -->
+<!-- SLIDER (เหมือนเดิมทุกคำ) -->
 <div class="slider">
 <div class="slides" id="slides">
 
@@ -188,6 +290,28 @@ flex-wrap:wrap;
 </div>
 </div>
 
+<!-- FEATURED -->
+<div class="featured">
+<h2>ผลงานเด่น</h2>
+<div class="featured-grid">
+<img src="images/house1/01-cover.jpg" class="big">
+<img src="images/house2/01-cover.jpg">
+<img src="images/house3/01-cover.jpg">
+<img src="images/project1/01-cover.jpg">
+<img src="images/project2/01-cover.jpg" class="big">
+<img src="images/project3/01-cover.jpg">
+<img src="images/project4/01-cover.jpg">
+<img src="images/project5/01-cover.jpg">
+<img src="images/project6/01-cover.jpg">
+</div>
+</div>
+
+<div class="featured-text">
+<h3>มากกว่าแค่ความสวยงาม</h3>
+<p>ทุกงานออกแบบของเรา ไม่ได้เน้นเพียงภาพลักษณ์
+แต่คำนึงถึงการใช้งานจริง ความทนทาน และความรู้สึกของผู้อยู่อาศัย</p>
+</div>
+
 <!-- STATS -->
 <div class="why">
 <h2>ทำไมลูกค้าจึงเลือก I-D-E-C</h2>
@@ -196,6 +320,32 @@ flex-wrap:wrap;
 <div><h3>300+</h3><p>ผลงานโครงการ</p></div>
 <div><h3>100%</h3><p>ความตั้งใจในทุกงาน</p></div>
 </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<div>
+<img src="images/logo.png" class="footer-logo">
+<p>I-D-E-C Interior Design</p>
+</div>
+<div>
+<p>📞 099-398-9169</p>
+<p>📧 idecdesign@gmail.com</p>
+</div>
+<div>
+<a href="index.html">หน้าแรก</a>
+<a href="portfolio.html">ผลงาน</a>
+</div>
+<div>
+<a href="https://line.me/ti/p/XXXX" target="_blank" class="line-btn">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg">
+แอด LINE
+</a>
+</div>
+</div>
+
+<div class="copyright">
+© 2026 I-D-E-C
 </div>
 
 <script>
