@@ -4,91 +4,108 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Glamor Ekkamai – Pradit Manutham</title>
+<title>The Glamor - Ekkamai – Pradit Manutham</title>
 
 <style>
 body{
   margin:0;
   background:#0f0f0f;
   font-family:sans-serif;
+  color:white;
 }
 
-/* HERO */
-.hero{
-  position:relative;
-  background:#000;
+/* ===== NAVBAR ===== */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 40px;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+  z-index:1000;
 }
+
+.logo img{height:40px;}
+
+.menu{display:flex;gap:20px;}
+
+.menu a{
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+}
+
+/* ===== HERO ===== */
+.hero{margin-top:70px;}
 
 .hero img{
   width:100%;
   height:90vh;
-  object-fit:contain;
-  display:block;
+  object-fit:cover;
 }
 
-/* MOBILE HERO */
-@media(max-width:768px){
-  .hero img{
-    object-fit:cover;
-  }
+/* ===== TEXT ===== */
+.text-block{
+  text-align:center;
+  padding:100px 20px;
+  max-width:800px;
+  margin:auto;
 }
 
-.hero-text{
-  position:absolute;
-  bottom:40px;
-  left:40px;
-  color:white;
+.text-block h2{
+  font-size:28px;
+  letter-spacing:1px;
 }
 
-.hero-text h1{
-  font-size:36px;
-  margin:0;
+.text-block p{opacity:0.7;}
+
+/* ===== LAYOUT ===== */
+.section img{
+  width:100%;
+  height:80vh;
+  object-fit:cover;
+  cursor:pointer;
 }
 
-.hero-text p{
-  opacity:0.7;
-}
-
-/* GALLERY */
-.gallery{
+.grid-2{
   display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap:15px;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
   padding:20px;
 }
 
-.gallery img{
+.grid-3{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+  padding:20px;
+}
+
+.grid-2 img, .grid-3 img{
   width:100%;
-  border-radius:16px;
+  border-radius:12px;
   cursor:pointer;
   transition:0.3s;
 }
 
-.gallery img:hover{
+.grid-2 img:hover,
+.grid-3 img:hover{
   transform:scale(1.03);
 }
 
-/* MOBILE GRID */
-@media(max-width:768px){
-  .gallery{
-    grid-template-columns:1fr;
-  }
-
-  .hero-text h1{
-    font-size:24px;
-  }
-}
-
-/* LIGHTBOX */
+/* ===== LIGHTBOX ===== */
 .lightbox{
-  position:fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background:rgba(0,0,0,0.95);
   display:none;
-  align-items:center;
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.95);
   justify-content:center;
-  z-index:999;
+  align-items:center;
+  z-index:2000;
 }
 
 .lightbox img{
@@ -96,86 +113,181 @@ body{
   max-height:90%;
 }
 
-.close{
-  position:absolute;
-  top:20px;
-  right:30px;
-  color:white;
-  font-size:40px;
-  cursor:pointer;
+/* ===== FOOTER ===== */
+.footer{
+  background:#111;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  padding:40px;
+  border-top:1px solid #222;
 }
 
-.arrow{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  color:white;
-  font-size:50px;
-  cursor:pointer;
-  padding:10px;
+.footer-logo{
+  width:120px;
 }
 
-.left{ left:20px; }
-.right{ right:20px; }
+.footer a{
+  color:white;
+  text-decoration:none;
+  display:block;
+  margin-bottom:5px;
+}
+
+/* LINE BUTTON */
+.line-btn{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:#00c300;
+  padding:12px 18px;
+  border-radius:10px;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.2s;
+}
+
+.line-btn:hover{
+  background:#00a800;
+}
+
+.line-btn img{
+  width:20px;
+  height:20px;
+}
+
+/* COPYRIGHT */
+.copyright{
+  text-align:center;
+  padding:15px;
+  background:#000;
+  color:#aaa;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .navbar{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .menu{
+    flex-wrap:wrap;
+    padding-top:10px;
+  }
+
+  .grid-2,.grid-3{
+    grid-template-columns:1fr;
+  }
+
+  .hero img,
+  .section img{
+    height:auto;
+  }
+
+  .footer{
+    grid-template-columns:1fr;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <img src="images/house1/01-cover.jpg">
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">
+    <img src="images/logo.png">
+  </div>
 
-  <div class="hero-text">
-    <h1>The Glamor Ekkamai – Pradit Manutham</h1>
-    <p>Bangkok, Thailand</p>
+  <div class="menu">
+    <a href="index.html">หน้าแรก</a>
+    <a href="portfolio.html">ผลงาน</a>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="contact.html">ติดต่อ</a>
   </div>
 </div>
 
-<!-- GALLERY -->
-<div class="gallery">
-  <img src="images/house1/02.jpg" onclick="openLightbox(0)">
-  <img src="images/house1/03.jpg" onclick="openLightbox(1)">
-  <img src="images/house1/04.jpg" onclick="openLightbox(2)">
-  <img src="images/house1/05.jpg" onclick="openLightbox(3)">
+<!-- HERO -->
+<div class="hero">
+  <img src="images/house/01-cover.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<!-- TEXT -->
+<div class="text-block">
+  <h2>Modern Luxury Living</h2>
+  <p>บ้านพักอาศัย3.5ชั้น ใจกลางเมือง รองรับการใช้ชีวิตระดับพรีเมียม
+ทุกพื้นที่ถูกวางฟังก์ชันอย่างลงตัว ผสานความหรูหราเข้ากับความสะดวกสบายได้อย่างสมบูรณ์แบบ</p>
+</div>
+
+<!-- FULL -->
+<div class="section">
+  <img src="images/house1/02.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<!-- GRID 2 -->
+<div class="grid-2">
+  <img src="images/house1/03.jpg" onclick="openLightbox(this.src)">
+  <img src="images/houset1/04.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<!-- TEXT -->
+<div class="text-block">
+  <h2>Elegant Interior Design</h2>
+  <p>เลือกใช้วัสดุเกรดดีในทุกองค์ประกอบ ตั้งแต่งานบิวท์อินไปจนถึงรายละเอียดเล็ก ๆ
+เพื่อให้ได้งานที่สวยงามมีคุณค่า ตอบสนองความต้องการที่มีระดับ</p>
+</div>
+
+<!-- GRID 3 -->
+<div class="grid-3">
+  <img src="images/project1/05.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+
+  <div>
+    <img src="images/logo.png" class="footer-logo">
+    <p>I-D-E-C Interior Design</p>
+    <p>รับออกแบบและตกแต่งภายใน</p>
+  </div>
+
+  <div>
+    <p>📞 099-398-9169</p>
+    <p>📧 idecdesign@gmail.com</p>
+    <p>📍 Bangkok, Thailand</p>
+  </div>
+
+  <div>
+    <a href="index.html">หน้าแรก</a>
+    <a href="portfolio.html">ผลงาน</a>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="contact.html">ติดต่อ</a>
+  </div>
+
+  <div>
+    <a href="https://line.me/ti/p/XXXX" target="_blank" class="line-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg">
+      แอด LINE ปรึกษาฟรี
+    </a>
+  </div>
+
+</div>
+
+<div class="copyright">
+  © 2026 I-D-E-C All rights reserved
 </div>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <span class="close" onclick="closeLightbox()">×</span>
-  <span class="arrow left" onclick="prev()">❮</span>
+<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
   <img id="lightbox-img">
-  <span class="arrow right" onclick="next()">❯</span>
 </div>
 
 <script>
-const images = [
-"images/house1/02.jpg",
-"images/house1/03.jpg",
-"images/house1/04.jpg",
-"images/house1/05.jpg"
-];
-
-let current = 0;
-
-function openLightbox(index){
-  current = index;
-  document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = images[current];
-}
-
-function closeLightbox(){
-  document.getElementById("lightbox").style.display = "none";
-}
-
-function next(){
-  current = (current + 1) % images.length;
-  document.getElementById("lightbox-img").src = images[current];
-}
-
-function prev(){
-  current = (current - 1 + images.length) % images.length;
-  document.getElementById("lightbox-img").src = images[current];
+function openLightbox(src){
+  document.getElementById("lightbox").style.display="flex";
+  document.getElementById("lightbox-img").src = src;
 }
 </script>
 
