@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Built-in Furniture BY I-D-E-C</title>
+
+<style>
+body{
+  margin:0;
+  background:#0f0f0f;
+  font-family:sans-serif;
+  color:white;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 40px;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+  z-index:1000;
+}
+
+.logo img{height:40px;}
+
+.menu{display:flex;gap:20px;}
+
+.menu a{
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+}
+
+/* ===== HERO ===== */
+.hero{margin-top:70px;}
+
+.hero img{
+  width:100%;
+  height:90vh;
+  object-fit:cover;
+}
+
+/* ===== TEXT ===== */
+.text-block{
+  text-align:center;
+  padding:100px 20px;
+  max-width:800px;
+  margin:auto;
+}
+
+.text-block h2{
+  font-size:28px;
+  letter-spacing:1px;
+}
+
+.text-block p{opacity:0.7;}
+
+/* ===== LAYOUT ===== */
+.section img{
+  width:100%;
+  height:80vh;
+  object-fit:cover;
+  cursor:pointer;
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  padding:20px;
+}
+
+.grid-3{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+  padding:20px;
+}
+
+.grid-2 img, .grid-3 img{
+  width:100%;
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.grid-2 img:hover,
+.grid-3 img:hover{
+  transform:scale(1.03);
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox{
+  display:none;
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.95);
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:90%;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  background:#111;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  padding:40px;
+  border-top:1px solid #222;
+}
+
+.footer-logo{
+  width:120px;
+}
+
+.footer a{
+  color:white;
+  text-decoration:none;
+  display:block;
+  margin-bottom:5px;
+}
+
+/* LINE BUTTON */
+.line-btn{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:#00c300;
+  padding:12px 18px;
+  border-radius:10px;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.2s;
+}
+
+.line-btn:hover{
+  background:#00a800;
+}
+
+.line-btn img{
+  width:20px;
+  height:20px;
+}
+
+/* COPYRIGHT */
+.copyright{
+  text-align:center;
+  padding:15px;
+  background:#000;
+  color:#aaa;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .navbar{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .menu{
+    flex-wrap:wrap;
+    padding-top:10px;
+  }
+
+  .grid-2,.grid-3{
+    grid-template-columns:1fr;
+  }
+
+  .hero img,
+  .section img{
+    height:auto;
+  }
+
+  .footer{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">
+    <img src="images/logo.png">
+  </div>
+
+  <div class="menu">
+    <a href="index.html">หน้าแรก</a>
+    <a href="portfolio.html">ผลงาน</a>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="contact.html">ติดต่อ</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="images/builtin4/01-cover.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<!-- TEXT -->
+<div class="text-block">
+  <h2>Built-in That Blends Into Living</h2>
+  <h2>Seamless design for every corner</h2>  
+  <p>งาน Built-in ในโปรเจกต์นี้ถูกออกแบบให้ “กลืนไปกับสถาปัตยกรรม” ของบ้าน
+ไม่ใช่แค่เฟอร์นิเจอร์ แต่เป็นส่วนหนึ่งของพื้นที่ตั้งแต่โครงสร้างไปจนถึงการใช้งานจริง
+
+เราออกแบบตู้และผนังให้ต่อเนื่องกันทั้งแนว
+ลดรอยต่อที่ไม่จำเป็น และใช้เส้นสายเดียวกันทั้งบ้านเพื่อสร้างความเรียบร้อยในภาพรวม
+
+ในส่วนของตู้เก็บของและตู้รองเท้า มีการผสมผสานระหว่างบานปิดและช่องโชว์
+พร้อมไฟซ่อนที่ช่วยเพิ่มมิติ ทำให้พื้นที่ดูมีชีวิตมากขึ้นโดยไม่รกสายตา
+
+ตู้เสื้อผ้าแบบเต็มผนังถูกออกแบบให้ใช้งานได้เต็มประสิทธิภาพ
+ทั้งฟังก์ชันเก็บของ การเปิดใช้งาน และการจัดสัดส่วนภายใน
+
+รวมถึงมุมโต๊ะทำงาน โต๊ะแต่งตัว และเฟอร์นิเจอร์เฉพาะจุด
+ที่ออกแบบให้พอดีกับพื้นที่จริง ใช้งานสะดวก และยังคงความเรียบร้อยของดีไซน์โดยรวม
+
+ทุกองค์ประกอบถูกคิดตั้งแต่ภาพใหญ่จนถึงรายละเอียดเล็กที่สุด
+เพื่อให้ Built-in ทุกชิ้น “ทำงานร่วมกัน” ได้อย่างสมบูรณ์</p>
+</div>
+
+<!-- FULL -->
+<div class="section">
+  <img src="images/builtin4/02.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<!-- GRID 2 -->
+<div class="grid-2">
+  <img src="images/builtin4/03.jpg" onclick="openLightbox(this.src)">
+  <img src="images/builtin4/04.jpg" onclick="openLightbox(this.src)">
+  <img src="images/builtin4/05.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<!-- TEXT -->
+<div class="text-block">
+  <h2>More Than Built-in</h2>
+  <h2>It’s how the space works together</h2>  
+  <p>Built-in ที่ดี ไม่ได้แค่เติมของเข้าไปในห้อง
+แต่มันต้อง “จัดระเบียบทั้งพื้นที่”
+
+งานชุดนี้เน้นการออกแบบให้ทุกอย่างเชื่อมต่อกัน
+ตั้งแต่ตู้เก็บของ ผนังตกแต่ง ไปจนถึงเฟอร์นิเจอร์ใช้งานในชีวิตประจำวัน
+
+เราใช้การออกแบบเส้นสายเดียวกันทั้งโปรเจกต์
+เพื่อให้ภาพรวมดูนิ่ง สะอาด และมีความต่อเนื่อง
+
+การซ่อนไฟในจุดสำคัญช่วยเพิ่มมิติให้พื้นที่
+โดยไม่ต้องใช้ของตกแต่งจำนวนมาก
+
+ฟังก์ชันทุกอย่างถูกคิดจากการใช้งานจริง
+ไม่ว่าจะเป็นพื้นที่เก็บของ มุมแต่งตัว หรือโต๊ะทำงาน
+ทุกจุดถูกออกแบบให้ “ใช้ง่าย และอยู่แล้วสบาย”
+
+นี่คือ Built-in ที่ไม่ได้แค่สวย
+แต่ทำให้ทั้งบ้าน “เป็นระบบมากขึ้น” </p>
+</div>
+
+<!-- GRID 3 -->
+<div class="grid-3">
+  <img src="images/builtin4/06.jpg" onclick="openLightbox(this.src)">
+  <img src="images/builtin4/07.jpg" onclick="openLightbox(this.src)">
+  <img src="images/builtin4/08.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+
+  <div>
+    <img src="images/logo.png" class="footer-logo">
+    <p>I-D-E-C Interior Design</p>
+    <p>ออกแบบและรับเหมา ตกแต่งภายใน</p>
+  </div>
+
+  <div>
+    <p>📞 099-398-9169</p>
+    <p>📧 design.idec@gmail.com</p>
+    <p>📍 Bangkok, Thailand</p>
+  </div>
+
+  <div>
+    <a href="index.html">หน้าแรก</a>
+    <a href="portfolio.html">ผลงาน</a>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="contact.html">ติดต่อ</a>
+  </div>
+
+  <div>
+    <a href="https://line.me/ti/p/XXXX" target="_blank" class="line-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg">
+      แอด LINE ปรึกษาฟรี
+    </a>
+  </div>
+
+</div>
+
+<div class="copyright">
+  © 2026 I-D-E-C All rights reserved
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+  <img id="lightbox-img">
+</div>
+
+<script>
+function openLightbox(src){
+  document.getElementById("lightbox").style.display="flex";
+  document.getElementById("lightbox-img").src = src;
+}
+</script>
+
+</body>
+</html>
