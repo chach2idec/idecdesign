@@ -1,167 +1,241 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ผลงาน - I-D-E-C</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="รวมผลงานการตกแต่งภายในคุณภาพโดย I-D-E-C ที่ไว้วางใจได้จากลูกค้าและโครงการชั้นนำ">
-  <meta name="author" content="I-D-E-C">
+<title>ผลงาน - I-D-E-C</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',sans-serif;background:#fff;}
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
-      overflow-x: hidden;
-    }
-
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 40px;
-      z-index: 20;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .logo img {
-  height: 40px;
-  object-fit: contain;
+/* ===== NAVBAR ===== */
+.navbar{
+position:fixed;top:0;width:100%;
+background:white;
+display:flex;justify-content:space-between;
+align-items:center;padding:10px 40px;
+z-index:999;
 }
-    .menu {
-      display: flex;
-      gap: 20px;
-    }
+.logo img{height:40px;}
+.menu{display:flex;gap:20px;}
+.menu a{text-decoration:none;color:black;}
 
-    .menu a {
-      color: #333;
-      text-decoration: none;
-      font-weight: 500;
-    }
+/* ===== HERO ===== */
+.hero{
+margin-top:90px;
+text-align:center;
+padding:60px 20px;
+background:#f5f5f5;
+}
+.hero h1{font-size:28px;}
+.hero p{color:#666;margin-top:10px;}
 
-    .header {
-      margin-top: 100px;
-      text-align: center;
-      padding-bottom: 20px;
-    }
+/* ===== PORTFOLIO ===== */
+.section{
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
+}
+.section h2{
+font-size:22px;
+margin-bottom:20px;
+border-left:4px solid black;
+padding-left:10px;
+}
 
-    .header h1 {
-      font-size: 36px;
-      color: #222;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 30px auto 60px;
-      padding: 0 20px;
-    }
+.card{
+position:relative;
+overflow:hidden;
+display:block;
+}
 
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+transition:0.4s;
+}
 
-    .gallery img:hover {
-      transform: scale(1.03);
-    }
+.card:hover img{
+transform:scale(1.05);
+}
 
-    @media(max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+.overlay{
+position:absolute;
+bottom:0;
+width:100%;
+padding:15px;
+background:rgba(0,0,0,0.5);
+color:white;
+}
 
-      .menu {
-        flex-wrap: wrap;
-        padding-top: 10px;
-      }
+/* ===== FOOTER ===== */
+.footer{
+background:#111;color:white;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;padding:40px;
+}
+.footer-logo{width:120px;}
+.footer a{
+color:white;text-decoration:none;
+display:block;margin-bottom:5px;
+}
 
-      .header h1 {
-        font-size: 28px;
-      }
-    }
-  </style>
+.line-btn{
+display:flex;align-items:center;gap:8px;
+background:#00c300;padding:12px 18px;
+border-radius:10px;color:white;font-weight:600;
+}
+.line-btn img{width:20px;}
+
+.copyright{
+text-align:center;padding:15px;
+background:#000;color:#aaa;
+}
+
+/* ===== FLOAT LINE ===== */
+.line-floating{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#00c300;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+font-weight:600;
+text-decoration:none;
+z-index:999;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+.navbar{flex-direction:column;align-items:flex-start;}
+.menu{width:100%;justify-content:space-around;padding-top:10px;}
+.footer{grid-template-columns:1fr;}
+}
+</style>
+
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="logo">
-      <img src="images/logo.png" alt="I-D-E-C Logo">
-    </div>
-    <div class="menu">
-      <a href="index.html">หน้าแรก</a>
-      <a href="portfolio.html">ผลงาน</a>
-      <a href="about.html">เกี่ยวกับเรา</a>
-      <a href="contact.html">ติดต่อเรา</a>
-    </div>
-  </div>
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="logo"><img src="images/logo.png"></div>
+<div class="menu">
+<a href="index.html">หน้าแรก</a>
+<a href="portfolio.html">ผลงาน</a>
+<a href="about.html">เกี่ยวกับเรา</a>
+<a href="contact.html">ติดต่อเรา</a>
+</div>
+</div>
 
-  <!-- Header -->
-  <div class="header">
-    <h1>ผลงานของเรา</h1>
-  </div>
+<!-- HERO -->
+<div class="hero">
+<h1>Design That Works In Real Life</h1>
+<p>บ้านที่สวย ต้องใช้งานได้จริง</p>
+</div>
 
-  <!-- Gallery -->
-  <div class="gallery">
-    <img src="images/work01.jpg" alt="Mantana100+ เทียนทะเล" />
-    <img src="images/work03.jpg" alt="Mantana100+ เทียนทะเล" />
-    <img src="images/work04.jpg" alt="Mantana100+ เทียนทะเล" />
-    <img src="images/work05.jpg" alt="Mantana100+ เทียนทะเล" />    
-    <img src="images/work07.jpg" alt="Mantana100+ เทียนทะเล" />
-    <img src="images/work02.jpg" alt="Mantana มอร์เตอร์เวย์-พระราม9" />
-    <img src="images/work06.jpg" alt="Mantana บางบอน" />
-    <img src="images/work08.jpg" alt="Mantana บางบอน" />
-    <img src="images/work09.jpg" alt="Mantana บางบอน" />
-    <img src="images/work10.jpg" alt="Mantana บางบอน" />
-    <img src="images/work11.jpg" alt="Chaiyapruek แจ้งวัฒนะ" />
-    <img src="images/work12.jpg" alt="Burasiri กรุงเทพกรีฑา" />
-    <img src="images/work13.jpg" alt="The Glamor Ladprao" />
-    <img src="images/work (1).jpg" alt="ผลงาน14" />
-    <img src="images/work (2).jpg" alt="ผลงาน15" />
-    <img src="images/work (3).jpg" alt="ผลงาน16" />
-    <img src="images/work (4).jpg" alt="ผลงาน17" />
-    <img src="images/work (5).jpg" alt="ผลงาน..." />
-    <img src="images/work (6).jpg" alt="ผลงาน..." />
-    <img src="images/work (7).jpg" alt="ผลงาน..." />
-    <img src="images/work (8).jpg" alt="ผลงาน..." />
-    <img src="images/work (9).jpg" alt="ผลงาน..." />
-    <img src="images/work (10).jpg" alt="ผลงาน..." />
-    <img src="images/work (11).jpg" alt="ผลงาน..." />
-    <img src="images/work (12).jpg" alt="ผลงาน..." />
-    <img src="images/work (13).jpg" alt="ผลงาน..." />
-    <img src="images/work (14).jpg" alt="ผลงาน..." />
-    <img src="images/work (15).jpg" alt="ผลงาน..." />
-    <img src="images/work (16).jpg" alt="ผลงาน..." />
-    <img src="images/work (17).jpg" alt="ผลงาน..." />
-    <img src="images/work (18).jpg" alt="ผลงาน..." />
-    <img src="images/work (19).jpg" alt="ผลงาน..." />
-    <img src="images/work (20).jpg" alt="ผลงาน..." />
-    <img src="images/work (21).jpg" alt="ผลงาน..." />
-    <img src="images/work (22).jpg" alt="ผลงาน..." />
-    <img src="images/work (23).jpg" alt="ผลงาน..." />
-    <img src="images/work (24).jpg" alt="ผลงาน..." />
-    <img src="images/work (25).jpg" alt="ผลงาน..." />
-    <img src="images/work (26).jpg" alt="ผลงาน..." />
-    <img src="images/work (27).jpg" alt="ผลงาน..." />
-    <img src="images/work (28).jpg" alt="ผลงาน..." />
-    <img src="images/work (29).jpg" alt="ผลงาน..." />
-  </div>
+<!-- HOUSE -->
+<div class="section">
+<h2>House</h2>
+<div class="grid">
+
+<a href="house1.html" class="card">
+<img src="images/house1/01-cover.jpg">
+<div class="overlay">House 01</div>
+</a>
+
+<a href="house2.html" class="card">
+<img src="images/house2/01-cover.jpg">
+<div class="overlay">House 02</div>
+</a>
+
+<a href="house3.html" class="card">
+<img src="images/house3/01-cover.jpg">
+<div class="overlay">House 03</div>
+</a>
+
+</div>
+</div>
+
+<!-- PROJECT -->
+<div class="section">
+<h2>Project</h2>
+<div class="grid">
+
+<a href="project1.html" class="card"><img src="images/project1/01-cover.jpg"><div class="overlay">Project 01</div></a>
+<a href="project2.html" class="card"><img src="images/project2/01-cover.jpg"><div class="overlay">Project 02</div></a>
+<a href="project3.html" class="card"><img src="images/project3/01-cover.jpg"><div class="overlay">Project 03</div></a>
+<a href="project4.html" class="card"><img src="images/project4/01-cover.jpg"><div class="overlay">Project 04</div></a>
+<a href="project5.html" class="card"><img src="images/project5/01-cover.jpg"><div class="overlay">Project 05</div></a>
+<a href="project6.html" class="card"><img src="images/project6/01-cover.jpg"><div class="overlay">Project 06</div></a>
+<a href="project7.html" class="card"><img src="images/project7/01-cover.jpg"><div class="overlay">Project 07</div></a>
+<a href="project8.html" class="card"><img src="images/project8/01-cover.jpg"><div class="overlay">Project 08</div></a>
+<a href="project9.html" class="card"><img src="images/project9/01-cover.jpg"><div class="overlay">Project 09</div></a>
+
+</div>
+</div>
+
+<!-- BUILT-IN -->
+<div class="section">
+<h2>Built-in</h2>
+<div class="grid">
+
+<a href="builtin1.html" class="card"><img src="images/builtin1/01-cover.jpg"><div class="overlay">Built-in 01</div></a>
+<a href="builtin2.html" class="card"><img src="images/builtin2/01-cover.jpg"><div class="overlay">Built-in 02</div></a>
+<a href="builtin3.html" class="card"><img src="images/builtin3/01-cover.jpg"><div class="overlay">Built-in 03</div></a>
+<a href="builtin4.html" class="card"><img src="images/builtin4/01-cover.jpg"><div class="overlay">Built-in 04</div></a>
+<a href="builtin5.html" class="card"><img src="images/builtin5/01-cover.jpg"><div class="overlay">Built-in 05</div></a>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<div>
+<img src="images/logo.png" class="footer-logo">
+<p>I-D-E-C Interior Design</p>
+</div>
+
+<div>
+<p>📞 099-398-9169</p>
+<p>📧 design.idec@gmail.com</p>
+</div>
+
+<div>
+<a href="index.html">หน้าแรก</a>
+<a href="portfolio.html">ผลงาน</a>
+<a href="about.html">เกี่ยวกับเรา</a>
+<a href="contact.html">ติดต่อเรา</a>
+</div>
+
+<div>
+<a href="https://line.me/ti/p/XXXX" target="_blank" class="line-btn">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg">
+แอด LINE
+</a>
+</div>
+</div>
+
+<div class="copyright">
+© 2026 I-D-E-C
+</div>
+
+<!-- FLOAT LINE -->
+<a href="https://line.me/ti/p/XXXX" target="_blank" class="line-floating">
+LINE
+</a>
 
 </body>
 </html>
